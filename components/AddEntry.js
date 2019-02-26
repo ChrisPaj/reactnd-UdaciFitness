@@ -50,15 +50,19 @@ export default class AddEntry extends Component {
   };
 
   submit = () => {
-    const key = timeToString();
-    this.setState({
-      run: 0,
-      bike: 0,
-      swim: 0,
-      sleep: 0,
-      eat: 0
-    });
-  };
+    const key = timeToString()
+    const entry = this.state
+
+    // Update Redux
+
+    this.setState(() => ({ run: 0, bike: 0, swim: 0, sleep: 0, eat: 0 }))
+
+    // Navigate to home
+
+    // Save to "DB"
+
+    // Clear local notification
+  }
   render() {
     const metaInfo = getMetricMetaInfo();
     return (

@@ -1,10 +1,18 @@
 import React from 'react'
-import { View, Text } from 'react-native'
+import { View, Text, Slider } from 'react-native'
 
-export default function UdaciSlider () {
+export default function UdaciSlider ({ max, step, onChange, value, unit }) {
   return (
     <View>
-      <Text>UdaciSlider</Text>
+      <Slider
+	  maximumValue={max}
+	  minimumValue={0}
+	  step={step}
+	  onValueChange={onChange}/>
+	  <View>
+        <Text>{value}</Text>
+        <Text>{unit}</Text>
+      </View>
     </View>
   )
 }
