@@ -1,0 +1,39 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red8\green27\blue59;\red229\green242\blue255;\red203\green35\blue57;
+\red225\green255\blue233;\red27\green31\blue34;\red91\green40\blue180;\red6\green33\blue79;\red7\green68\blue184;
+}
+{\*\expandedcolortbl;;\cssrgb\c1961\c14902\c29804;\cssrgb\c91765\c96078\c100000;\cssrgb\c84314\c22745\c28627;
+\cssrgb\c90196\c100000\c92941;\cssrgb\c14118\c16078\c18039;\cssrgb\c43529\c25882\c75686;\cssrgb\c1176\c18431\c38431;\cssrgb\c0\c36078\c77255;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww31660\viewh8840\viewkind0
+\deftab720
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 - Update AddEntry and helpers\
+https://github.com/udacity/reactnd-UdaciFitness-complete/commit/c3b244a93a6fdd484cfd9306fc05e0c2095bdbe4\
+Achtung, mit Fehlern: 
+\fs36 \
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1\b0\fs24 \cf4 \cb5 \strokec4 return\cf6 \strokec6  \cf4 \strokec4 <\cf6 \strokec6 View\cf4 \strokec4 >\cf6 \strokec6 \{\cf7 \strokec7 getMetricMetaInfo\cf6 \strokec6 (\cf8 \strokec8 "bike"\cf6 \strokec6 ).getIcon\}\cf4 \strokec4 </\cf6 \strokec6 View\cf4 \strokec4 >\cf6 \strokec6 ; statt\
+\cf4 \strokec4 return\cf6 \strokec6  \cf4 \strokec4 <\cf6 \strokec6 View\cf4 \strokec4 >\cf6 \strokec6 \{\cf7 \strokec7 getMetricMetaInfo\cf6 \strokec6 (\cf8 \strokec8 "bike"\cf6 \strokec6 ).getIcon()\}\cf4 \strokec4 </\cf6 \strokec6 View\cf4 \strokec4 >\cf6 \strokec6 ;\cf4 \strokec4 \
+\
+<\cf6 \strokec6 MaterialCommunityIcons name\cf4 \strokec4 =\cf8 \strokec8 "swim"\cf6 \strokec6  color\cf4 \strokec4 =\cf6 \strokec6 \{white\} size\cf4 \strokec4 =\cf6 \strokec6 \{\cf9 \strokec9 35\cf6 \strokec6 \} \cf4 \strokec4 /> statt\
+<\cf6 \strokec6 MaterialCommunityIcons name\cf4 \strokec4 =\cf8 \strokec8 "swim"\cf6 \strokec6  color\cf4 \strokec4 =\cf6 \strokec6 \{\'93white\'94\} size\cf4 \strokec4 =\cf6 \strokec6 \{\cf9 \strokec9 35\cf6 \strokec6 \} \cf4 \strokec4 />\
+\
+\pard\pardeftab720\sl420\partightenfactor0
+
+\f0\b\fs28 \cf2 \cb3 \strokec2 - Changes for AddEntry-methods\
+https://github.com/udacity/reactnd-UdaciFitness-complete/commit/f710aa25881665feacf82b100643146b8d011446\
+Anlegen der Methoden Increase, Decrease und Slide\
+\
+- Changes for AddEntry-render\
+https://github.com/udacity/reactnd-UdaciFitness-complete/commit/3aa3f69d21b8a96b4b9d99f67b655772a479095f\
+Anlegen <UdaciSteppers /> und <UdaciSlider />; Mappen \'fcber getMetricMetaInfo um alle Icons darzustellen und die neuen Components mit diversen props zu rendern.\
+Interessant: \{\'85rest\}\
+\
+Changes for AddEntry-SubmitBtn\
+https://github.com/udacity/reactnd-UdaciFitness-complete/commit/fea2dbb62ef103ed0a44307dd7922bdfcab83ef2\
+Einf\'fcgen Button als TouchableOpacity}
