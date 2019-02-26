@@ -24,11 +24,11 @@ export default class AddEntry extends Component {
 
   increment = metric => {
     const { step, max } = getMetricMetaInfo(metric);
-    const count = state[metric] + step;
+    const count = this.state[metric] + step;
     this.setState(state => {
       return {
         ...state,
-        [metric]: count > max ? max : count + step
+        [metric]: count > max ? max : count
       };
     });
   };
