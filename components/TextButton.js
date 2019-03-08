@@ -3,7 +3,7 @@ import { Text, TouchableOpacity } from "react-native";
 
 export default function TextButton( { children, onPress}){
 	return(
-		<TouchableOpacity onLongPress={onPress}>
+		<TouchableOpacity onPress={onPress}>
 			<Text>{children}</Text>
 		</TouchableOpacity>
 	)
