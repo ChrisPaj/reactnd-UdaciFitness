@@ -1,6 +1,7 @@
 {
   "expo": {
     "name": "UdaciFitness",
+    "description": "The best triathlon tracker ever",
     "slug": "UdaciFitness",
     "privacy": "public",
     "sdkVersion": "32.0.0",

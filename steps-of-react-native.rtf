@@ -4,13 +4,13 @@
 {\colortbl;\red255\green255\blue255;\red8\green27\blue59;\red229\green242\blue255;\red203\green35\blue57;
 \red225\green255\blue233;\red27\green31\blue34;\red91\green40\blue180;\red6\green33\blue79;\red7\green68\blue184;
 \red8\green27\blue59;\red229\green242\blue255;\red70\green137\blue204;\red23\green23\blue23;\red202\green202\blue202;
-\red140\green211\blue254;\red140\green211\blue254;\red23\green23\blue23;\red52\green52\blue52;\red255\green255\blue255;
-}
+\red140\green211\blue254;\red140\green211\blue254;\red23\green23\blue23;\red128\green0\blue128;\red52\green52\blue52;
+\red255\green255\blue255;}
 {\*\expandedcolortbl;;\cssrgb\c1961\c14902\c29804;\cssrgb\c91765\c96078\c100000;\cssrgb\c84314\c22745\c28627;
 \cssrgb\c90196\c100000\c92941;\cssrgb\c14118\c16078\c18039;\cssrgb\c43529\c25882\c75686;\cssrgb\c1176\c18431\c38431;\cssrgb\c0\c36078\c77255;
 \cssrgb\c1961\c14902\c29804;\cssrgb\c91765\c96078\c100000;\cssrgb\c33725\c61176\c83922;\cssrgb\c11765\c11765\c11765;\cssrgb\c83137\c83137\c83137;
-\cssrgb\c61176\c86275\c99608;\cssrgb\c61176\c86275\c99608;\cssrgb\c11765\c11765\c11765;\cssrgb\c26667\c26667\c26667;\cssrgb\c100000\c100000\c100000;
-}
+\cssrgb\c61176\c86275\c99608;\cssrgb\c61176\c86275\c99608;\cssrgb\c11765\c11765\c11765;\csgenericrgb\c50001\c0\c50001;\cssrgb\c26667\c26667\c26667;
+\cssrgb\c100000\c100000\c100000;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww31660\viewh17440\viewkind0
 \deftab720
 \pard\pardeftab720\sl420\partightenfactor0
@@ -142,11 +142,66 @@ Interessant: mapDispatchToProps, shouldComponentUpdate(nextProps)\
 https://github.com/udacity/reactnd-UdaciFitness-complete/commit/18aeee6aac40702c2d86cf976a9a67c5691505cf\
 Verwenden von NavigationActions, (kann aber auch alternativ gel\'f6st werden)\
 \
-\pard\pardeftab720\sl280\partightenfactor0
-
-\fs30\fsmilli15400 \cf18 \cb19 \outl0\strokewidth0 \strokec18 \
+- Live:  (Erstellen und einbinden in Tabs)\
+https://github.com/udacity/reactnd-UdaciFitness-complete/commit/8f38bb640f0441383ca906597049190989be853f\
 \
+- Live: Stylen der Variante undetermined\
+https://github.com/udacity/reactnd-UdaciFitness-complete/commit/62780584135dbfcee999b10ec3f01ec646aeb27b\
+\
+- Live: Stylen der Variante denied\
+https://github.com/udacity/reactnd-UdaciFitness-complete/commit/70aa708e381b86471da886e01efc6568df076c54\
+\
+- Live: UI, wenn nicht undetermined und nicht denied\
+https://github.com/udacity/reactnd-UdaciFitness-complete/commit/5a834dc7790f3612a9bebdf4b25ded34e9bfe580\
+\
+- Live: state permanent mit (Geo-) Daten f\'fcllen\
+https://github.com/udacity/reactnd-UdaciFitness-complete/commit/654fab8ad1502c104a0501adea1819a4f9ab54c1\
+componentDidMount pr\'fcft per 
+\f1\b0\fs24 \cf18 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 Permissions.getAsync(Permissions.LOCATION)
+\f0\b\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\CocoaLigature1    ob permission vorliegt.\
+Wenn positiv, wird 
+\f1\b0\fs24 \cf18 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 setLocation = () => \{ Location.watchPositionAsync...
+\f0\b\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\CocoaLigature1  aufgerufen, die den state permanent geupdatet h\'e4lt\
+\
+-Live: Funktion askpermission (wird auf buttonPress ausgef\'fchrt. wie componentDidMount, nur askAsync statt getAsync)  \
+https://github.com/udacity/reactnd-UdaciFitness-complete/commit/0b092b57b530fd6b2d9e9577dd299351e74df75f\
+\
+- \'fcber Animations: https://www.youtube.com/watch?time_continue=345&v=lyM8LcmrdS8\
+\
+- Live: Verwenden der Animated Library\
+https://github.com/udacity/reactnd-UdaciFitness-complete/commit/7a701a6fbe7d0331e3ae8cce7899d55ce9653bd3\
+\
+-helpers: Notifications, Teil 1\
+https://github.com/udacity/reactnd-UdaciFitness-complete/blob/setLocalNotification/utils/helpers.js\
+3 Funktionen: \
+	-  
+\f1\b0\fs24 \cf18 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 setLocalNotification
+\f0\b\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\CocoaLigature1   schaut, ob Notifications in \'93DB\'94 (AsyncStorage) existieren. Wenn nicht wird nachgefragt, ob erw\'fcnscht. Wenn ja werden alle auf dem Ger\'e4t (ungleich DB) gel\'f6scht und eine neue erstellt\
+	- 
+\f1\b0\fs24 \cf18 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 clearLocalNotification
+\f0\b\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\CocoaLigature1   l\'f6scht alle  Notifications aus \'93DB\'94 (AsyncStorage) und Ger\'e4t\
+	- 
+\f1\b0\fs24 \cf18 \cb1 \kerning1\expnd0\expndtw0 \CocoaLigature0 createNotification
+\f0\b\fs28 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\CocoaLigature1   gibt ein Objekt zur\'fcck, das die Notification ist \
+-helpers: Notifications, Teil 2\
+https://github.com/udacity/reactnd-UdaciFitness-complete/commit/63778456f674355e40044c673f4b966ebd446866\
+\
+- Fotos aus den Aufnahmen darstellen: https://www.youtube.com/watch?time_continue=266&v=fAqI8iGAgiQ\
+\
+-app.json: Metadaten einf\'fcgen\
+https://github.com/udacity/reactnd-UdaciFitness-complete/commit/ca00e023b9c01139efdfb54d7dfa9e18c75b4297\
+\
+\
+
+\fs30\fsmilli15400 \cf19 \cb20 \outl0\strokewidth0 \strokec19 \
+\pard\pardeftab720\sl280\partightenfactor0
+\cf19 \
 \
 \pard\pardeftab720\sl360\partightenfactor0
-\cf18 \
+\cf19 \
 }
